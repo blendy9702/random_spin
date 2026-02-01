@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "랜덤 스핀",
@@ -13,6 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <Analytics />
       <body className="antialiased">{children}</body>
     </html>
   );
